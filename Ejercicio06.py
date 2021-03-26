@@ -7,28 +7,30 @@
  
 #Ejm:
  
- #Entrada: '(()()())()()(())'
- #Salida: True
- 
- #Entrada: '(()('
- #Salida: False
+#Entrada: '(()()())()()(())'
+#Salida: True
 
-def ParImpar(string):
+#Entrada: '(()('
+#Salida: False
 
-    abierto, cerrado = 0, 0 # inicializamos numero de parentesis en 0
+def balanceo(string):
 
-    for i in string:
-        if i == "(": abierto += 1
-        else: cerrado += 1
+    pila = [] # definir nuestra lista
+    parentesis = {'(':')'} # definir clave valor de "(" = ")"
+
+    for i in string: # recorrer el string
+        if i in parentesis: # si el caracter se encuentra en nuestro diccionario
+            pila.append(i) 
+        elif len(pila) == 0 or i != parentesis[pila.pop()]: # si la pila esta vácia o si el 
+            return False                                    # caracter es diferente al último
+                                                            # elemento de la pila regresa falso
     
-    if abierto == cerrado: return True
-
+    if len(pila) == 0: return True # si la pila esta vacía
     else: return False
-        
-string1 = "(()()())()()(())"
+  
 
-string2 = "(()("
+string1 = "(()())()"
+string2 = ")(()"
 
-print(ParImpar(string1)) # True
-
-print(ParImpar(string2)) # False
+print(balanceo(string1)) # True
+print(balanceo(string2)) # False
