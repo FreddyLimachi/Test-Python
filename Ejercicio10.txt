@@ -1,0 +1,17 @@
+# Teoria de SQL:
+ 
+# Defina índice en base datos, como hacer un flujo de respaldo, como operar con null
+
+Indice: es un tipo de dato para la identificación de cada registro de una tabla, asi es mas
+rapido y preciso realizar consultas.
+
+Flujo de respaldo:
+
+Se refiere a la copia de seguridad de una base de datos, en el caso de mysql lo podemos exportar
+directamente desde PhpMyAdmin, o a travez de su consola (MySQL), con el comando mysqldump.
+
+Null:
+
+El valor "null" no tiene un tipo de dato, es facil trabajar con este, ya que no afecta en nada
+a las consultas que realizemos, si sumamos 100 + null seguira siendo 100, si agregamos dias en 
+nuestra columna de fechas el valor de null no sera afectado, y así en los otros tipos de datos.

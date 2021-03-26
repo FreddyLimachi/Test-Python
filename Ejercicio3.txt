@@ -1,0 +1,22 @@
+# Pregunta 3:
+ 
+# Que es INDEX (indice) en base de datos, indicar beneficios y desventajas
+
+Index: son la identificación para cada registro de una tabla.
+
+Tipos de index:
+
+Clave primaria: es una identificación única, sin valores nulos
+Ordinario: permite identificación duplicada y valores nulos
+Unícos: no permite valores duplicados pero si valores nulos
+
+Beneficios:
+
+- Cada registro tiene su identificación única
+- Podemos hacer busquedas o consultas por el index, para que sea más rapido y preciso
+
+Desventajas:
+
+- Ocupan espacio
+- En operaciones de registro o modificación tambien se actualizan los index
+  y toman un poco mas de tiempo (milesimas).
