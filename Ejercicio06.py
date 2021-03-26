@@ -21,9 +21,9 @@ def balanceo(string):
     for i in string: # recorrer el string
         if i in parentesis: # si el caracter se encuentra en nuestro diccionario
             pila.append(i) 
-        elif len(pila) == 0 or i != parentesis[pila.pop()]: # si la pila esta vácia o si el 
-            return False                                    # caracter es diferente al último
-                                                            # elemento de la pila regresa falso
+        elif len(pila) == 0 or i != parentesis[pila.pop()]: # si la pila esta vácia o el 
+            return False                                    # caracter es diferente al parentesis
+                                                            # de cierre del ultimo elemento de la lista
     
     if len(pila) == 0: return True # si la pila esta vacía
     else: return False
