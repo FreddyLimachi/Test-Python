@@ -1,30 +1,22 @@
-#Pregunta 8:
+# Pregunta 8:
  
-#Escribir un programa que tenga como input 10 numeros positivos de 3 digitos,
-# y como output liste los que son capicuas,
- 
-#ordenandolos de menor a mayor
+# Desarrollar un programa que encuentre el 20avo numero capicúa de 3 digitos
 
-def capicuas(lista):
+def capicua():
+    
+    count = 0 #conteo de capicuas
+    numero = 100 #empezamos con 3 digitos
 
-    capicuas = [] #lista vacia para almecenar capicuas
-    
-    for num in lista: # recorremos la lista
-        count = 1 
-        for n in str(num):
-            if count == 1: # primer digito
-                digito1 = n
-            elif count == 3: # tercer digito
-                digito3 = n
-    
-            count += 1 # contabilizamos el numero de digito
+    while count < 20: #hasta encontrar el 20avo capicua
+
+        lista_num = list(str(numero)) # separamos digitos en una lista
+
+        if lista_num == lista_num[::-1]: #invertimos la lista
+            capicua=''.join(lista_num) #juntar los numeros de la lista
+            count += 1 # incrementando el contador
         
-        if digito1 == digito3: #si el primer digito y el tercer digito son iguales
-            capicuas.append(num)
-    
-    return capicuas
+        numero += 1 #incrementamos el numero para la prueba           
+            
+    print("El 20vo capicúa de 3 dígitos es: ", capicua)
 
-
-lista = [234, 191, 157, 389, 757, 834, 331, 642, 404, 519]
-
-print(capicuas(lista)) # 191, 757, 404
+capicua()
